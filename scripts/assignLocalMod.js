@@ -5,7 +5,7 @@ const successfulAdmins = [];
 mongoose.Promise = global.Promise;
 mongoose.connect(`mongodb://localhost:27017/secret-hitler-app`);
 
-Account.find({ username: { $in: ['Uther', 'admin'] } })
+Account.find({ username: { $in: ['osman', 'admin'] } })
 	.cursor()
 	.eachAsync(acc => {
 		acc.staffRole = 'admin';

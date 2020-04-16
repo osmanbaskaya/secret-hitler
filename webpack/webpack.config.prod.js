@@ -11,6 +11,11 @@ process.env.NODE_ENV = 'production';
 
 module.exports = {
 	entry: './src/frontend-scripts/game-app.js',
+	performance: {
+		hints: false,
+		maxEntrypointSize: 400000,
+		maxAssetSize: 100000
+	},
 	output: {
 		filename: `bundle.js`,
 		path: path.resolve(__dirname, '../public/scripts')

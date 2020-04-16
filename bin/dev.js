@@ -28,7 +28,7 @@ global.notify = require('node-notifier');
 
 app.set('port', port);
 app.set('strict routing', true);
-server.listen(port);
+server.listen(port, '0.0.0.0');
 
 function onError(error) {
 	if (error.syscall !== 'listen') {
